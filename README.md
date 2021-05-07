@@ -1,1 +1,3 @@
-# Java
+# Java ( Small programs to practice the concepts )
+
+Program 1.java  = Basic Code to display a message in the output screen
