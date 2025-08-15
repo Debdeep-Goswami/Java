@@ -119,5 +119,39 @@ class Main
     String[] array = {"Tom" , "Jerry"};
     result = String.join(" & ", array);
     System.out.println("Result = "+result);
+
+
+    //  Non Static Methods
+
+    String sample = "Hello World";
+
+    //  _________________________________________ concat() _________________________________
+    String sample2 = " From Java code";
+    result = sample.concat(sample2);
+    System.out.println("Result = "+ result);
+
+    //  _________________________________________ intern() _________________________________
+
+    /*
+     * Calling intern() on a string ensures that:
+
+      The string is added to the String Pool (a special memory area for storing unique string literals).
+
+      If an identical string already exists in the pool, it returns a reference to that existing string.
+
+      If not, it adds the string to the pool and then returns the reference.
+     
+      */
+
+      String s1 = new String("hello");
+      String s2 = "hello";
+        
+      System.out.println(s1 == s2);              // false → different memory locations
+
+      String s3 = s1.intern();      // Moves s1's content to the pool or gets reference from pool
+
+      System.out.println(s2 == s3);              // true → both refer to the same object in pool
+
+      //  ____________________________________ 
   }
 }
