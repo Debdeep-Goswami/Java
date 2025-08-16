@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Optional;
 import java.util.List;
 
 import javax.print.DocFlavor.STRING;
@@ -152,6 +153,11 @@ class Main
 
       System.out.println(s2 == s3);              // true → both refer to the same object in pool
 
-      //  ____________________________________ 
+      //  ____________________________________ describeConstable() __________________________
+
+      Optional<String> resultOptional = sample.describeConstable();
+      System.out.println("ResultOptional = "+resultOptional);
+      result = resultOptional.get();
+      System.out.println("Result = "+result);
   }
 }
